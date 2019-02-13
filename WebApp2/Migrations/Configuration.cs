@@ -6,6 +6,7 @@ namespace WebApp2.Migrations
     using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<WebApp2.Models.AppDbContext>
+
     {
         public Configuration()
         {
@@ -15,6 +16,7 @@ namespace WebApp2.Migrations
 
         protected override void Seed(WebApp2.Models.AppDbContext context)
         {
+        
             if (!context.Students.Any())
             {
                 context.Students.Add(new Models.Student()
@@ -27,6 +29,8 @@ namespace WebApp2.Migrations
 
                 });
             }
+
+           
         }
     }
 }
